@@ -1,0 +1,8 @@
+<div class="boundingContainer">
+    <div *ngIf="!userOnSignUpStep">
+        <app-login-page [formGroup]="userCredentialsFormGroup"></app-login-page>
+    </div>
+    <!-- <div *ngIf="userOnSignUpStep">
+        <app-signup-page [formGroup]="userCredentialsFormGroup"></app-signup-page>
+    </div> -->
+</div>
