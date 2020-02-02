@@ -1,7 +1,8 @@
 <div [formGroup]="form" class="loginContainer">
-    Username: <input type="text" formControlName="userName" id="username">
-    Email: <input type="text" formControlName="email" id="email">
-    Password: <input type="password" formControlName="password" id="password">
+    <input type="text" formControlName="userName" id="username" placeholder="Username">
+    <input type="text" formControlName="email" id="email" placeholder="Email">
+    <input type="password" formControlName="password" id="password" placeholder="Password">
+    <br>
     <button type="submit" (click)="submit()">Submit</button>
 </div>
 

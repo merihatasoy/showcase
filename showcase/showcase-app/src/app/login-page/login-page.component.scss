@@ -1,15 +1,28 @@
 .loginContainer {
     margin: auto;
+    background-color: rgb(165, 165, 165);
+    width: 15.2em;
+    font-family: Helvetica;
+    padding: 15px;
+    margin-top: 10%;
 
     input {
         border-radius: 5px;
-        border: 1px solid #949494;
+        font-size: 16px;
+        border: 1px solid #94949415;
         height: 25px;
+        margin-top: 10px;
         width: 240px;
         display: flex;
     }
 
     button {
-
+        border-radius: 5px;
+        font-size: 16px;
+        border: 1px solid #949494;
+        height: 35px;
+        margin-top: 10px;
+        width: 240px;
+        display: flex;
     }
 }
