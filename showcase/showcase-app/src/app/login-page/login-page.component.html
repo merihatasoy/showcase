@@ -1,5 +1,7 @@
-<div [formGroup]="userCredentialsFormGroup">
-    Username: <input type="text" formControlName="userName">
+<div [formGroup]="form" class="loginContainer">
+    Username: <input type="text" formControlName="userName" id="username">
+    Email: <input type="text" formControlName="email" id="email">
+    Password: <input type="password" formControlName="password" id="password">
     <button type="submit" (click)="submit()">Submit</button>
 </div>
 

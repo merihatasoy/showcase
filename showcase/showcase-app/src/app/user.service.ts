@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 const fb = new FormBuilder();
 
@@ -21,23 +22,31 @@ export class UserService {
   constructor() { 
     this.userForm = fb.group({
       credentials: fb.group({
-        userName: [''],
-        email: [''],
-        password: [''],
+        userName: ['', this.userNameValidations],
+        email: ['', this.emailValidations],
+        password: ['', this.passwordValidations],
       }),
     });
   }
 
   get userFormIsValid() {
-    return (this.userForm.get('credentials.username').valid && this.userForm.get('credentials.email').valid && this.userForm.get('credentials.password').valid);
+    return (this.userForm.get('credentials.userName').valid && this.userForm.get('credentials.email').valid && this.userForm.get('credentials.password').valid);
   }
   get userNameValidations() {
     return [Validators.required, Validators.pattern(this.usernamePattern)];
   }
   get emailValidations() {
-    return [Validators.required, Validators.pattern(this.emailValidations)];
+    return [Validators.required, Validators.pattern(this.emailPattern)];
   }
   get passwordValidations() {
-    return [Validators.required, Validators.pattern(this.passwordValidations)];
+    return [Validators.required, Validators.pattern(this.passwordPattern)];
+  }
+
+  callSignUp() { //: Observable<User>
+    return;
+  }
+
+  callLogin() { //: Observable<User>
+    return;
   }
 }
