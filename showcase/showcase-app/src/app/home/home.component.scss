@@ -16,6 +16,70 @@ div.container {
         font-family: Open Sans Condensed;
         z-index: 30;
         margin: auto;
+        text-align: center;
+    }
+
+    .software-card {
+        background: url('../../assets/software-card.gif');
+        height: 200px;
+        width: 150px;
+        display: flexbox;
+        box-shadow: 0px 0px 2px;
+
+        .card-title {
+            position: relative;
+            top: 160px;
+            font-size: 15pt;
+            left: 5px;
+            color: white;
+            border-bottom: 1px solid white;
+            text-shadow: 1px 1px #181818;
+            font-family: Open Sans Condensed;
+        }
+
+        .card-description {
+            position: relative;
+            top: 170px;
+            font-size: 8pt;
+            left: 7px;
+            color: white;
+            display: none;
+            font-family: Open Sans Condensed;
+        }
+    }
+
+    .software-card:hover {
+
+        .card-title {
+            position: relative;
+            animation-name: hover-top-title;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-direction: forwards;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        .card-description {
+            position: relative;
+            display: unset;
+            animation-name: hover-top-desc;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-direction: forwards;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    @keyframes hover-top-desc {
+        from { top: 170px; }
+        to { top: 120px; }
+    }
+
+    @keyframes hover-top-title {
+        from { top: 160px; }
+        to { top: 110px; }
     }
 
 }
